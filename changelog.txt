@@ -1,0 +1,42 @@
+bank.json stores changes in user's bank
+!bank will create a bank account if there is none
+!bank only returns int
+!spin runs !bank to create bank if needed
+!reload
+
+
+to do:
+!spin too much doesnt return error
+yfinance - stocks
+ccxt - crypto
+
+
+
+
+        if result.count(self.cherry) == 1:
+            await ctx.send(f"winner + {int(bet)*2}")
+            self.bank_dict[user_id] += int(bet)*1
+        elif result.count(self.cherry) == 2:
+            await ctx.send(f"winner + {int(bet)*5}")
+            self.bank_dict[user_id] += int(bet) * 4
+        elif result.count(self.cherry) == 3:
+            await ctx.send(f"winner + {int(bet)*10}")
+            self.bank_dict[user_id] += int(bet) * 9
+        elif result.count(self.orange) == 3:
+            await ctx.send(f"winner + {int(bet)*15}")
+            self.bank_dict[user_id] += int(bet) * 14
+        elif result.count(self.grape) == 3:
+            await ctx.send(f"winner + {int(bet)*20}")
+            self.bank_dict[user_id] += int(bet) * 19
+        elif result.count(self.bell) == 3:
+            await ctx.send(f"winner + {int(bet)*50}")
+            self.bank_dict[user_id] += int(bet) * 49
+        elif result.count(self.number_7) == 3:
+            await ctx.send(f"JACKPOT!!! + {int(bet)*100}")
+            self.bank_dict[user_id] += int(bet) * 99
+        elif result.count(self.dollar) == 3:
+            await ctx.send(f"MEGA JACKPOT!!!!! + {int(bet)*500}")
+            self.bank_dict[user_id] += int(bet) * 499
+        else:
+            await ctx.send(f"loser - {bet}")
+            self.bank_dict[user_id] -= int(bet)
