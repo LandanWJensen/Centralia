@@ -16,7 +16,6 @@ class SlotMachine:
         self.bank_dict = self.load_bank()
 
     def load_bank(self):
-        os.chdir(r'\Users\landa\PycharmProjects\InfluenceBot')
         try:
             with open("bank.json", 'r') as file:
                 return json.load(file)
